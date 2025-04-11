@@ -1,4 +1,4 @@
-package sdet.algorhythms.happynumber;
+package sdet.algorhythms.happyNumber;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

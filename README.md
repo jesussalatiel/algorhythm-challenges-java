@@ -74,18 +74,8 @@ After setting up your project, you can use the following commands:
 - **Execute Spotless (Prettier):**
 
   ```
-  ./gradlew spotlessApply
+  ./gradlew :app:spotlessApply
   ```
-
-````
- This command runs the tests defined in your project.
-
-- **Install the Distribution:**
- ```bash
- gradle installDist
-````
-
-This command creates a distribution package of your application, typically located in the `build/install` directory.
 
 ## Problem Solving Explanation
 

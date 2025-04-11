@@ -1,5 +1,4 @@
-
-package sdet.algorhythms.happynumber;
+package sdet.algorhythms.happyNumber;
 
 public class App {
   public Boolean isHappyNumber(int n) {
