@@ -14,7 +14,7 @@ plugins {
 spotless {
     // Formatting for Java code (as an example)
     java {
-        googleJavaFormat("1.10.0")
+        googleJavaFormat("1.17.0")
     }
 
     // Formatting for JavaScript or other files using Prettier:
