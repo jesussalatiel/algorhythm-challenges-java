@@ -8,7 +8,22 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("com.diffplug.spotless") version "6.21.0"
 }
+
+spotless {
+    // Formatting for Java code (as an example)
+    java {
+        googleJavaFormat("1.10.0")
+    }
+
+    // Formatting for JavaScript or other files using Prettier:
+    format("misc") {
+        target("src/**/*.js", "src/**/*.ts", "src/**/*.css", "src/**/*.html")
+        prettier().config(mapOf("singleQuote" to true))
+    }
+}
+
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -17,8 +32,8 @@ repositories {
 
 dependencies {
     // Use JUnit test framework.
-    testImplementation(libs.junit)
-
+    testImplementation("junit:junit:4.13")
+    
     // This dependency is used by the application.
     implementation(libs.guava)
 }
@@ -33,4 +48,11 @@ java {
 application {
     // Define the main class for the application.
     mainClass = "org.example.App"
+}
+
+tasks.test {
+	useJUnit()
+	testLogging {
+		events("passed", "skipped", "failed")
+	}
 }
